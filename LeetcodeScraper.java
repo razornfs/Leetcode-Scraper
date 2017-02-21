@@ -28,7 +28,7 @@ public class LeetcodeScraper {
     }
 
     public static void main(String[] args) {
-        getUserDetails(args);
+        getUserDetails();
         login();
         selectSolvedFromDropdown();
         selectAllRowsFromDropdown();
@@ -42,13 +42,12 @@ public class LeetcodeScraper {
         }
     }
 
-    private static void getUserDetails(String[] args) {
-        if (args.length != 2) {
-            System.out.println("Please provide username and password");
-            System.exit(0);
-        }
-        username = args[0];
-        password = args[1];
+    private static void getUserDetails() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Username: ");
+        username = scanner.nextLine();
+        System.out.println("Password: ");
+        password = scanner.nextLine();
     }
 
     private static void login() {
