@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.Console;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -43,11 +45,10 @@ public class LeetcodeScraper {
     }
 
     private static void getUserDetails() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Username: ");
-        username = scanner.nextLine();
+        username = new Scanner(System.in).nextLine();
         System.out.println("Password: ");
-        password = scanner.nextLine();
+        password = Arrays.toString(System.console().readPassword());
     }
 
     private static void login() {
